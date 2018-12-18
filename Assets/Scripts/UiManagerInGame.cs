@@ -31,6 +31,7 @@ public class UiManagerInGame : MonoBehaviour
 
     public void OnClickedButtonNextLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
