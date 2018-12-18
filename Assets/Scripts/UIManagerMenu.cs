@@ -11,6 +11,11 @@ public class UIManagerMenu : MonoBehaviour
         StartCoroutine(FakeTimer());
     }
 
+    public void ClickQuit()
+    {
+        Application.Quit();
+        Debug.Log("Au revoir");
+    }
     IEnumerator FakeTimer()
     {
         yield return new WaitForSeconds(2f);
