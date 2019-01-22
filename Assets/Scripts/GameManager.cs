@@ -47,10 +47,10 @@ public class GameManager : MonoBehaviour {
             {
                 if (enemy.GetComponent<EnemyBehaviour>().IsInTrigger)
                 {
-                    Destroy(enemy);
+                    enemy.GetComponent<EnemyBehaviour>().Death();
                     foreach (GameObject spawner in GameObject.FindGameObjectsWithTag("EnemySpawner"))
                     {
-                        spawner.GetComponent<SpawnEnemy>().DestroyEnemy();
+                        spawner.GetComponent<SpawnEnemy>().ResetSpawner();
                     }
                 }
             }

@@ -29,12 +29,11 @@ public class SpawnEnemy : MonoBehaviour {
     {
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("Enemy triggered");
             CanSpawnEnemy = false;
         }
     }
 
-    public void DestroyEnemy()
+    public void ResetSpawner()
     {
         CanSpawnEnemy = true;
     }

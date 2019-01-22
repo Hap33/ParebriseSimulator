@@ -305,7 +305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 698016161}
   m_Layer: 0
-  m_Name: GameLimits (1)
+  m_Name: GameLimits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -589,7 +589,7 @@ GameObject:
   - component: {fileID: 1293927010}
   - component: {fileID: 1293927009}
   m_Layer: 0
-  m_Name: Ground (1)
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -856,7 +856,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1695244240}
   m_Layer: 0
-  m_Name: SpawnerList (1)
+  m_Name: 'SpawnerList '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -889,7 +889,7 @@ GameObject:
   - component: {fileID: 1718554753}
   - component: {fileID: 1718554752}
   m_Layer: 0
-  m_Name: GameManager (1)
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
