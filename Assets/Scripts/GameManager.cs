@@ -29,16 +29,20 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.P))
+
+        if (Input.GetButtonDown("Submit"))
         {
+            #region Spawn Enemy
             foreach (GameObject spawner in GameObject.FindGameObjectsWithTag("EnemySpawner"))
             {
                 spawner.GetComponent<SpawnEnemy>().SpawnAnEnemy();
             }
+            #endregion
         }
 
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetButtonDown("Cancel"))
         {
+            #region Destroy Enemy
             foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
             {
                 if (enemy.GetComponent<EnemyBehaviour>().IsInTrigger)
@@ -50,6 +54,7 @@ public class GameManager : MonoBehaviour {
                     }
                 }
             }
+            #endregion
         }
 	}
 
