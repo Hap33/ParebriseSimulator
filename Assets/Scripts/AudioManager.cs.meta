@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bda0ee4b6be6dde43ac521694218109b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - MenuMusic: {fileID: 8300000, guid: a0d6aec36d417044ab5b73ce8ce8320a, type: 3}
+  - GameMusic: {fileID: 8300000, guid: e799b14a6b76b574abaf7597885ee566, type: 3}
+  - PauseMusic: {fileID: 8300000, guid: e1c086233991cd841b53da4c06649d2b, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

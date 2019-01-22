@@ -1,9 +1,11 @@
 fileFormatVersion: 2
-guid: bda0ee4b6be6dde43ac521694218109b
+guid: 0f219a5aec3231e4c8f9b3e1aa670a5f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - MenuMusic: {fileID: 8300000, guid: a0d6aec36d417044ab5b73ce8ce8320a, type: 3}
+  - GameMusic: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
