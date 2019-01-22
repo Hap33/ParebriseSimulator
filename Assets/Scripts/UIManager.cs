@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour {
 
     [SerializeField]
     public string MainMenuScene, GameScene;
+    public GameObject LoadingScreen;
 
     // Quits the game
     public void QuitGame()
@@ -40,11 +41,19 @@ public class UIManager : MonoBehaviour {
         SceneManager.LoadScene(GameScene);
     }
 
-    // Fakes a loading time
-    private IEnumerator FakeLoadingTime(int buildIndex)
+    // Load a scene from its name
+    public void LoadScene(string SceneToLoad)
     {
+        StartCoroutine(FakeLoadingTime(SceneToLoad));
+    }
+    // Fakes a loading time
+    private IEnumerator FakeLoadingTime(string SceneToLoad)
+    {
+        LoadingScreen.SetActive(true);
+        Time.timeScale = 1f;
+
         yield return new WaitForSeconds(2f);
 
-        SceneManager.LoadScene(buildIndex);
+        SceneManager.LoadScene(SceneToLoad);
     }
 }
