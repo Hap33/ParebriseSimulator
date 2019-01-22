@@ -3,35 +3,57 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UiManagerInGame : MonoBehaviour
+public class UIManagerInGame : MonoBehaviour
 {
-    public GameObject endPanel;
-    public GameObject hud;
+    #region Singleton
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public static UIManagerInGame instance;
 
-    public void OnClickedButtonEndPanel()
+    private void Awake()
     {
-        hud.SetActive(false);
-        endPanel.SetActive(true);
+        if (UIManagerInGame.instance != null)
+            Destroy(this);
+        else UIManagerInGame.instance = this;
     }
 
-    public void OnClickedButtonMenu()
+    #endregion
+
+    public GameObject pauseMenu, endMenu;
+
+    private bool gameIsPaused;
+
+    // Initiates variables
+    private void Start()
     {
-        SceneManager.LoadScene("Menu");
+        gameIsPaused = false;
+
+        pauseMenu.SetActive(false);
+        endMenu.SetActive(false);
     }
 
-    public void OnClickedButtonNextLevel()
+    // Checks if Pause is pressed
+    private void Update()
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if (Input.GetButtonDown("Pause"))
+            SetGamePause(!gameIsPaused);
+
+        if (Input.GetKeyDown(KeyCode.M))
+            EndGame();
+    }
+
+    // Pauses or unpauses the game
+    public void SetGamePause(bool gamePause)
+    {
+        pauseMenu.SetActive(gamePause);
+
+        Time.timeScale = gamePause ? 0f : 1f;
+    }
+
+    // Ends the game
+    public void EndGame()
+    {
+        Time.timeScale = 0f;
+
+        endMenu.SetActive(true);
     }
 }
