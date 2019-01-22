@@ -17,13 +17,13 @@ public class GameManager : MonoBehaviour {
         {
             Singleton = this;
         }
-        DontDestroyOnLoad(gameObject);
     }
     #endregion
 
     public GameObject Player;
     
     void Start () {
+        Time.timeScale = 1f;
         Instantiate(Player);
 	}
 	
